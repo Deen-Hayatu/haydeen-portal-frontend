@@ -1,0 +1,93 @@
+# ---------------------------------------------------------------------------
+# Haydeen Portal - Frontend Sandbox
+#
+# This repository is frontend-only by design. It must never contain secrets,
+# backend code, infrastructure configuration, or customer/applicant data.
+# The blocks marked SAFETY exist to make that hard to get wrong by accident -
+# please do not remove them.
+# ---------------------------------------------------------------------------
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+jspm_packages/
+
+# Build output
+dist/
+build/
+out/
+.vite/
+*.tsbuildinfo
+
+# SAFETY - secrets and environment. Nothing in this repo needs them.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+credentials
+secrets.json
+.npmrc
+.netrc
+
+# SAFETY - customer, applicant, and company documents never belong here
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.pptx
+uploads/
+applicants/
+
+# SAFETY - backend / infrastructure must not drift into this repo
+server/
+api/
+deployment-scripts/
+drizzle.config.ts
+ecosystem.config.cjs
+nginx.conf
+*.nginx.conf
+docker-compose*.yml
+Dockerfile*
+deploy-*.sh
+
+# Logs and diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+report.*.json
+
+# Test / tooling output
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+.lighthouseci/
+
+# Editor and OS noise
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# Local scratch
+tmp/
+temp/
+.cache/

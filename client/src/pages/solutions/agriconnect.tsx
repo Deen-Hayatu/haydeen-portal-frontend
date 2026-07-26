@@ -1,0 +1,659 @@
+import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Check, Award, Globe, Users, Database, BookOpen } from "lucide-react";
+import HeadTags from "@/components/seo/head-tags";
+import BetaSignupForm from "@/components/ui/beta-signup-form";
+import farmerMobileImage from "@assets/generated_images/ghanaian_farmer_using_mobile_app.png";
+import farmerPortraitImage from "@assets/generated_images/ghanaian_cocoa_farmer_portrait.png";
+import { buildCdnSources, onCdnImgError } from "@/lib/cdn";
+
+const Agriconnect = () => {
+  const farmerMobileCdn = buildCdnSources("generated_images/ghanaian_farmer_using_mobile_app.png");
+  const farmerPortraitCdn = buildCdnSources("generated_images/ghanaian_cocoa_farmer_portrait.png");
+  return (
+    <>
+      <HeadTags
+        title="AgriConnect | Agricultural Platform by Haydeen Technologies Ghana"
+        description="AgriConnect connects farmers, buyers, and suppliers across Ghana and West Africa. Our digital agricultural platform offers market access, logistics coordination, and data-driven farming solutions."
+        keywords="AgriConnect, agricultural platform Ghana, farmers marketplace, agricultural technology, farming solutions West Africa, agricultural data, crop management"
+        canonical="https://haydeentechnologies.com/solutions/agriconnect"
+      />
+      {/* Hero Section */}
+      <section className="relative bg-[#27AE60] text-white py-16 md:py-20">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">AgriConnect</h1>
+              <p className="text-xl mb-4 opacity-90">
+                Get fair prices for your crops and connect directly with buyers. No more middlemen taking your profits.
+              </p>
+              <p className="text-lg mb-4 opacity-80">
+                In active development • Built for Ghana's farmers, by Ghanaians who understand your challenges.
+              </p>
+              
+              <div className="flex flex-wrap gap-4">
+                <Link href="#beta-signup" className="btn bg-white text-[#27AE60] hover:bg-opacity-90">
+                  Request Beta Access
+                </Link>
+                <a href="#features" className="btn bg-[#0A3D62] text-white hover:bg-opacity-90">
+                  See How It Works
+                </a>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src={farmerMobileCdn?.src ?? farmerMobileImage} 
+                srcSet={farmerMobileCdn?.srcSet}
+                onError={onCdnImgError(farmerMobileImage)}
+                sizes="(max-width: 768px) 100vw, 640px"
+                alt="West African farmer using AgriConnect mobile app" 
+                className="rounded-lg shadow-xl"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Overview */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A3D62] mb-6">The Problem We're Solving</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Ghana's farmers lose money every day. They can't find buyers, middlemen take huge cuts, and they have no way to know fair market prices. Many farmers still rely on word-of-mouth and hope for the best.
+            </p>
+            <h3 className="text-2xl font-bold text-[#27AE60] mb-4">How AgriConnect Changes That</h3>
+            <p className="text-lg text-gray-600">
+              AgriConnect connects you directly with buyers, shows market pricing, and helps you get better deals for your crops. No more guessing. No more middlemen. Just fair prices and direct connections.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Stat 1 */}
+            <div className="bg-[#F2F2F2] rounded-lg p-6 text-center">
+              <div className="text-lg font-bold text-[#27AE60] mb-2">Market Access</div>
+              <p className="text-gray-600">Connect directly with buyers across regions and reduce dependency on intermediaries.</p>
+            </div>
+            
+            {/* Stat 2 */}
+            <div className="bg-[#F2F2F2] rounded-lg p-6 text-center">
+              <div className="text-lg font-bold text-[#27AE60] mb-2">Decision Support</div>
+              <p className="text-gray-600">Use weather and market signals to improve planting, harvesting, and sales decisions.</p>
+            </div>
+            
+            {/* Stat 3 */}
+            <div className="bg-[#F2F2F2] rounded-lg p-6 text-center">
+              <div className="text-lg font-bold text-[#27AE60] mb-2">Operational Access</div>
+              <p className="text-gray-600">Mobile-friendly workflows designed for farmers with varying connectivity and device access.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section id="features" className="py-16 md:py-24 bg-[#F2F2F2]">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A3D62] mb-4">Key Features</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
+              AgriConnect offers a comprehensive suite of tools designed specifically for West African farmers and agricultural businesses.
+            </p>
+          </div>
+
+          <Tabs defaultValue="data" className="max-w-5xl mx-auto">
+            <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-8">
+              <TabsTrigger value="data" className="data-tab">
+                <Database className="h-5 w-5 mr-2" />
+                <span className="hidden md:inline">Data & Insights</span>
+                <span className="md:hidden">Data</span>
+              </TabsTrigger>
+              <TabsTrigger value="marketplace">
+                <Globe className="h-5 w-5 mr-2" />
+                <span className="hidden md:inline">Marketplace</span>
+                <span className="md:hidden">Market</span>
+              </TabsTrigger>
+              <TabsTrigger value="education">
+                <BookOpen className="h-5 w-5 mr-2" />
+                <span className="hidden md:inline">Education</span>
+                <span className="md:hidden">Learn</span>
+              </TabsTrigger>
+              <TabsTrigger value="community">
+                <Users className="h-5 w-5 mr-2" />
+                <span className="hidden md:inline">Community</span>
+                <span className="md:hidden">Connect</span>
+              </TabsTrigger>
+              <TabsTrigger value="finance">
+                <Award className="h-5 w-5 mr-2" />
+                <span className="hidden md:inline">Finance Access</span>
+                <span className="md:hidden">Finance</span>
+              </TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="data" className="border rounded-lg p-6 bg-white">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-[#0A3D62] mb-4">Data & Insights</h3>
+                  <p className="text-gray-600 mb-6">
+                    Access real-time weather forecasts, soil data, and crop-specific insights to make informed decisions about planting, harvesting, and crop management.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Hyperlocal weather forecasts to support farm planning</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Soil nutrient analysis and recommendations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Pest and disease early warning system</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Crop yield prediction and optimization</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={farmerMobileCdn?.src ?? farmerMobileImage} 
+                    srcSet={farmerMobileCdn?.srcSet}
+                    onError={onCdnImgError(farmerMobileImage)}
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    alt="West African farmer checking crop data on mobile app" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="marketplace" className="border rounded-lg p-6 bg-white">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="rounded-lg overflow-hidden shadow-lg md:order-first order-last">
+                  <img 
+                    src={farmerPortraitCdn?.src ?? farmerPortraitImage} 
+                    srcSet={farmerPortraitCdn?.srcSet}
+                    onError={onCdnImgError(farmerPortraitImage)}
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    alt="Digital marketplace for West African farmers" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#0A3D62] mb-4">Marketplace</h3>
+                  <p className="text-gray-600 mb-6">
+                    Connect directly with buyers, input suppliers, and service providers through our secure digital marketplace with fair, transparent pricing.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Direct connections to premium buyers</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Bulk purchasing of inputs at discounted prices</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Secure payment processing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Quality verification and traceability</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="education" className="border rounded-lg p-6 bg-white">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-[#0A3D62] mb-4">Education Resources</h3>
+                  <p className="text-gray-600 mb-6">
+                    Access a wealth of agricultural knowledge and best practices through our educational resources, available in multiple local languages.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Video tutorials on farming techniques</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Content localized for regional language contexts</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Offline access for low-connectivity areas</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Seasonal guides for key crops</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={farmerMobileCdn?.src ?? farmerMobileImage} 
+                    srcSet={farmerMobileCdn?.srcSet}
+                    onError={onCdnImgError(farmerMobileImage)}
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    alt="West African farmers learning through mobile educational content" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="community" className="border rounded-lg p-6 bg-white">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="rounded-lg overflow-hidden shadow-lg md:order-first order-last">
+                  <img 
+                    src={farmerPortraitCdn?.src ?? farmerPortraitImage} 
+                    srcSet={farmerPortraitCdn?.srcSet}
+                    onError={onCdnImgError(farmerPortraitImage)}
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    alt="West African farmer community meeting" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#0A3D62] mb-4">Community</h3>
+                  <p className="text-gray-600 mb-6">
+                    Connect with other farmers, agricultural experts, and extension officers to share knowledge, ask questions, and collaborate.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Discussion forums for specific crops and regions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Direct messaging with agricultural experts</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Group buying and selling opportunities</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Local event notifications and coordination</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="finance" className="border rounded-lg p-6 bg-white">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-[#0A3D62] mb-4">Finance Access</h3>
+                  <p className="text-gray-600 mb-6">
+                    Gain access to financial services including micro-loans, insurance, and savings products specifically designed for farmers.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Seasonal micro-loans for inputs and equipment</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Weather index insurance for crop protection</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Digital savings and payment services</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-6 w-6 text-[#27AE60] mr-2 flex-shrink-0" />
+                      <span>Financial literacy training and resources</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={farmerMobileImage} 
+                    alt="Farmer accessing financial services on mobile" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
+
+      {/* Case Study */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <span className="text-[#27AE60] font-semibold mb-2 inline-block">CASE STUDY</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A3D62] mb-4">Transforming Agriculture in Northern Ghana</h2>
+              <p className="text-gray-600">
+                See how AgriConnect helped small-scale farmers in Northern Ghana increase yields and income.
+              </p>
+            </div>
+
+            <div className="bg-[#F2F2F2] rounded-xl p-8 mb-8">
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-[#0A3D62] mb-2">The Challenge</h3>
+                <p className="text-gray-600">
+                  Small-scale farmers in Northern Ghana faced multiple challenges: limited access to weather information, difficulty connecting with premium buyers, and lack of resources for optimizing crop production. Most farmers were earning below-subsistence incomes despite their hard work and dedication.
+                </p>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-[#0A3D62] mb-2">The Solution</h3>
+                <p className="text-gray-600">
+                  AgriConnect is designed to support farmers across the region by providing:
+                </p>
+                <ul className="mt-3 space-y-2">
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600">Localized weather forecasts and soil information</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600">Direct connections to premium buyers offering fair prices</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600">Educational resources in local languages</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600">Access to affordable financing for quality inputs</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-bold text-[#0A3D62] mb-2">The Results</h3>
+                <p className="text-gray-600 mb-4">
+                  Early implementation feedback shows stronger confidence in pricing visibility, buyer access, and planning support:
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="bg-white rounded-lg p-4 text-center">
+                    <div className="text-base font-bold text-[#27AE60]">Buyer reach</div>
+                    <p className="text-sm text-gray-600">Improved direct market visibility</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 text-center">
+                    <div className="text-base font-bold text-[#27AE60]">Price confidence</div>
+                    <p className="text-sm text-gray-600">Better reference points for negotiations</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 text-center">
+                    <div className="text-base font-bold text-[#27AE60]">Planning support</div>
+                    <p className="text-sm text-gray-600">More informed crop-cycle decisions</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 text-center">
+                    <div className="text-base font-bold text-[#27AE60]">Operational fit</div>
+                    <p className="text-sm text-gray-600">Workflows aligned to field realities</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <blockquote className="italic text-gray-600 rounded-lg border border-[#27AE60]/30 bg-[#27AE60]/5 px-4 py-3 mb-8">
+              "AgriConnect is helping us plan better, compare offers, and make more confident farming decisions."
+              <footer className="text-right mt-2 font-semibold">- Abena K., Farmer in Tamale</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Features & Access */}
+      <section className="py-16 md:py-24 bg-[#F2F2F2]">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A3D62] mb-4">Multiple Ways to Access AgriConnect</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
+              Access AgriConnect through multiple channels designed for different technology levels and connectivity situations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Mobile App */}
+            <div className="bg-white rounded-xl p-8 shadow-lg text-center">
+              <div className="w-16 h-16 bg-[#27AE60] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-[#27AE60]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[#0A3D62] mb-3">Mobile Apps</h3>
+              <p className="text-gray-600 mb-4">Android & iOS apps with full functionality for smartphones.</p>
+              <div className="text-sm text-gray-500">
+                • Offline capability<br/>
+                • Push notifications<br/>
+                • Camera integration
+              </div>
+            </div>
+
+            {/* Web Platform */}
+            <div className="bg-white rounded-xl p-8 shadow-lg text-center">
+              <div className="w-16 h-16 bg-[#1ABC9C] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-[#1ABC9C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[#0A3D62] mb-3">Web Platform</h3>
+              <p className="text-gray-600 mb-4">Full-featured web application accessible from any browser.</p>
+              <div className="text-sm text-gray-500">
+                • Desktop experience<br/>
+                • Advanced analytics<br/>
+                • Bulk operations
+              </div>
+            </div>
+
+            {/* USSD */}
+            <div className="bg-white rounded-xl p-8 shadow-lg text-center">
+              <div className="w-16 h-16 bg-[#F39C12] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948-.684l1.498.75a1 1 0 01.684.948V7a1 1 0 01-1 1H4a1 1 0 01-1-1V5zM8 15a5 5 0 0110 0v1h-2v-1a3 3 0 00-6 0v1H8v-1z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[#0A3D62] mb-3">USSD Code</h3>
+              <p className="text-gray-600 mb-4">Basic services accessible without internet on any phone.</p>
+              <div className="text-sm text-gray-500">
+                • No internet required<br/>
+                • Works on any phone<br/>
+                • Price checking & SMS alerts
+              </div>
+            </div>
+          </div>
+
+          {/* Payment Integration */}
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-[#0A3D62] mb-6 text-center">Integrated Payment Solutions</h3>
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              <div className="p-4">
+                <div className="text-lg font-semibold text-[#27AE60] mb-2">MTN Mobile Money</div>
+                <p className="text-gray-600 text-sm">Secure payments and transfers</p>
+              </div>
+              <div className="p-4">
+                <div className="text-lg font-semibold text-[#1ABC9C] mb-2">Telecel Money</div>
+                <p className="text-gray-600 text-sm">Quick mobile transactions</p>
+              </div>
+              <div className="p-4">
+                <div className="text-lg font-semibold text-[#F39C12] mb-2">Kudipay</div>
+                <p className="text-gray-600 text-sm">Digital wallet integration</p>
+              </div>
+              <div className="p-4">
+                <div className="text-lg font-semibold text-[#E74C3C] mb-2">Bank Transfers</div>
+                <p className="text-gray-600 text-sm">Traditional banking options</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A3D62] mb-4">Choose Your Plan</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
+              Flexible subscription options designed to grow with your agricultural business.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Basic Plan */}
+            <div className="bg-[#F2F2F2] rounded-xl p-8">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-[#0A3D62] mb-2">Basic</h3>
+                <div className="text-2xl font-bold text-[#27AE60] mb-2">Starter Access</div>
+                <p className="text-gray-600">For early platform onboarding</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Weather forecasts</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Basic marketplace access</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Community forums</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">USSD access</span>
+                </li>
+              </ul>
+              <button className="w-full btn bg-[#27AE60] text-white hover:bg-opacity-90">
+                Get Started Free
+              </button>
+            </div>
+
+            {/* Pro Plan */}
+            <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-[#27AE60] relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-[#27AE60] text-white px-4 py-1 rounded-full text-sm font-medium">Popular</span>
+              </div>
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-[#0A3D62] mb-2">Pro</h3>
+                <div className="text-2xl font-bold text-[#27AE60] mb-2">Growth Plan</div>
+                <p className="text-gray-600">For scaling farm operations</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Everything in Basic</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Advanced analytics</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Premium buyer access</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Price trend alerts</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Priority support</span>
+                </li>
+              </ul>
+              <button className="w-full btn bg-[#27AE60] text-white hover:bg-opacity-90">
+                Start Pro Trial
+              </button>
+            </div>
+
+            {/* Enterprise Plan */}
+            <div className="bg-[#F2F2F2] rounded-xl p-8">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-[#0A3D62] mb-2">Enterprise</h3>
+                <div className="text-2xl font-bold text-[#27AE60] mb-2">Enterprise Plan</div>
+                <p className="text-gray-600">For large agricultural operations</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Everything in Pro</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Full logistics integration</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Bulk order management</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Custom reporting</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-[#27AE60] mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600">Dedicated account manager</span>
+                </li>
+              </ul>
+              <button className="w-full btn bg-[#27AE60] text-white hover:bg-opacity-90">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+
+          <div className="text-center mt-8 text-gray-600">
+            <p>Pricing and transaction terms are finalized during onboarding based on deployment scope.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Beta Signup Section */}
+      <section id="beta-signup" className="py-16 md:py-24 bg-[#F2F2F2]">
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A3D62] mb-4">Request Beta Access</h2>
+              <p className="text-lg text-gray-600">
+                Join the AgriConnect early access list for preview onboarding and implementation updates.
+              </p>
+            </div>
+            <BetaSignupForm defaultPlatform="AgriConnect" />
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-[#27AE60] text-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Agriculture?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Whether you're a farmer, agricultural business, or organization working in the sector, AgriConnect can help you achieve better results.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="#beta-signup" className="btn bg-white text-[#27AE60] hover:bg-opacity-90">
+                Request Beta Access
+              </Link>
+              <Link href="/solutions" className="btn bg-[#0A3D62] text-white hover:bg-opacity-90">
+                Explore Other Solutions
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Agriconnect;
