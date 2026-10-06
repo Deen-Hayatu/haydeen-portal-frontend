@@ -350,7 +350,7 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                Founded in Effiduasi, Ghana, after firsthand exposure to operational challenges in agriculture and healthcare. Farmers struggling to connect with buyers, clinics managing patient data on paper.
+                Founded in Effiduase Ghana, after firsthand exposure to operational challenges in agriculture and healthcare. Farmers struggling to connect with buyers, clinics managing patient data on paper.
               </p>
               <p>
                 That experience shapes a practical, resilient, accountable design philosophy: build for real constraints, deliver measurable outcomes, and earn trust through transparency.

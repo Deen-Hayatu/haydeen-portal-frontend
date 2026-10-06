@@ -66,7 +66,7 @@ const Leadership = () => {
 
                 <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
                   <p>
-                    Mohammad Deen Hayatu is a full-stack developer, AI engineer, and entrepreneur from Effiduasi, Ghana. Drawing on his background in biomedical research, he founded Haydeen Technologies to build practical software for healthcare delivery and operations.
+                    Mohammad Deen Hayatu is a full-stack developer, AI engineer, and entrepreneur from Effiduase, Ghana. Drawing on his background in biomedical research, he founded Haydeen Technologies to build practical software for healthcare delivery and operations.
                   </p>
                   <p>
                     He leads the product and engineering direction of GhEHR, Haydeen's Electronic Health Records and clinic management system for Ghana. His work focuses on making patient data and workflows usable by real clinic teams under day-to-day pressure.

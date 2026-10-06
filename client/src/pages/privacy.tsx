@@ -21,7 +21,7 @@ const Privacy = () => {
           <div className="prose prose-neutral max-w-none">
             <h2>1. Introduction</h2>
             <p>
-              Haydeen Technologies Ventures ("we", "our", "us") of BW 14 Benz Road, Effiduasi,
+              Haydeen Technologies Ventures ("we", "our", "us") of BW 14 Benz Road, Effiduase,
               Ashanti Region, Ghana is committed to protecting your privacy. This Privacy Policy
               explains how we collect, use, and safeguard your information when you use this
               website and our services. We process personal data in accordance with Ghana's Data
@@ -96,7 +96,7 @@ const Privacy = () => {
             </p>
             <p>
               <strong>Email:</strong> info@haydeentechnologies.com<br />
-              <strong>Address:</strong> BW 14 Benz Road, Effiduasi, Ashanti Region, Ghana
+              <strong>Address:</strong> BW 14 Benz Road, Effiduase, Ashanti Region, Ghana
             </p>
           </div>
         </div>

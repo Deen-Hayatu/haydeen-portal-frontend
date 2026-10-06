@@ -103,7 +103,7 @@ const Careers = () => {
                 <div className="flex flex-wrap gap-3 mt-4">
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                     <MapPin className="h-4 w-4 mr-1" />
-                    Remote / Effiduasi, Ashanti
+                    Remote / Effiduase, Ashanti
                   </Badge>
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                     <Clock className="h-4 w-4 mr-1" />
@@ -203,7 +203,7 @@ const Careers = () => {
                 <div className="flex flex-wrap gap-3 mt-4">
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                     <MapPin className="h-4 w-4 mr-1" />
-                    Remote / Effiduasi, Ashanti
+                    Remote / Effiduase, Ashanti
                   </Badge>
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                     <Clock className="h-4 w-4 mr-1" />
@@ -303,7 +303,7 @@ const Careers = () => {
                 <div className="flex flex-wrap gap-3 mt-4">
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                     <MapPin className="h-4 w-4 mr-1" />
-                    Remote / Effiduasi, Ashanti
+                    Remote / Effiduase, Ashanti
                   </Badge>
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                     <Clock className="h-4 w-4 mr-1" />
