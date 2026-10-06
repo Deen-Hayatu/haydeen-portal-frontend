@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3 text-neutral-400">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Bw 14 Benz road, Effiduasi, Ashanti, Ghana</span>
+                <span>Bw 14 Benz road, Effiduase, Ashanti, Ghana</span>
               </div>
               <div className="flex items-center gap-3 text-neutral-400">
                 <Mail className="h-4 w-4 flex-shrink-0" />
@@ -114,7 +114,7 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Haydeen Technologies. All rights reserved.
             </p>
             <p>
-              Effiduasi, Ashanti Region, Ghana
+              Effiduase, Ashanti Region, Ghana
             </p>
           </div>
         </div>
