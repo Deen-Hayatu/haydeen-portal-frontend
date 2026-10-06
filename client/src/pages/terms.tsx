@@ -22,7 +22,7 @@ const Terms = () => {
             <h2>1. Acceptance of Terms</h2>
             <p>
               By accessing or using the services of Haydeen Technologies Ventures ("Haydeen
-              Technologies", "we", "us") of BW 14 Benz Road, Effiduase, Ashanti Region, Ghana —
+              Technologies", "we", "us") of BW 14 Benz Road, Effiduasi, Ashanti Region, Ghana —
               including GhEHR, MedPal, AgriConnect, and our website design services — you agree
               to be bound by these Terms of Service.
             </p>
@@ -96,7 +96,7 @@ const Terms = () => {
             </p>
             <p>
               <strong>Email:</strong> info@haydeentechnologies.com<br />
-              <strong>Address:</strong> BW 14 Benz Road, Effiduase, Ashanti Region, Ghana
+              <strong>Address:</strong> BW 14 Benz Road, Effiduasi, Ashanti Region, Ghana
             </p>
           </div>
         </div>
