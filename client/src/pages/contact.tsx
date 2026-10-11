@@ -130,8 +130,8 @@ const Contact = () => {
         <>
           <HeadTags
             title="Contact Us | Haydeen Technologies Ghana - Get in Touch"
-            description="Contact Haydeen Technologies for innovative software solutions in Ghana. Located in Effiduasi, Ashanti. We offer AgriConnect, GhEHR, and custom website design services."
-            keywords="contact Haydeen Technologies, software company Ghana, Effiduasi Ashanti, AgriConnect support, GhEHR contact, website design Ghana"
+            description="Contact Haydeen Technologies for innovative software solutions in Ghana. Located in Effiduase, Ashanti. We offer AgriConnect, GhEHR, and custom website design services."
+            keywords="contact Haydeen Technologies, software company Ghana, Effiduase Ashanti, AgriConnect support, GhEHR contact, website design Ghana"
             canonical="https://haydeentechnologies.com/contact"
           />
       {/* Hero Section */}
@@ -164,7 +164,7 @@ const Contact = () => {
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-lg font-semibold text-[#0A3D62] mb-1">Visit Us</h3>
-                    <p className="text-gray-600">Bw 14 Benz road<br />Effiduasi Ashanti</p>
+                    <p className="text-gray-600">Bw 14 Benz road<br />Effiduase Ashanti</p>
                   </div>
                 </div>
 
@@ -438,21 +438,21 @@ const Contact = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0A3D62] mb-4">Our Location</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
-              Visit our office in Effiduasi, Ashanti Region to meet our team and learn more about our solutions.
+              Visit our office in Effiduase, Ashanti Region to meet our team and learn more about our solutions.
             </p>
           </div>
           
           <div className="h-[400px] w-full rounded-lg overflow-hidden shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254697.24703437256!2d-1.3836!3d6.9186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf89a8dc4c8d51%3A0xf2b9ff0b9a2f7b1!2sEffiduasi%2C%20Ghana!5e0!3m2!1sen!2sus!4v1689847225457!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254697.24703437256!2d-1.3836!3d6.9186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf89a8dc4c8d51%3A0xf2b9ff0b9a2f7b1!2sEffiduase%2C%20Ghana!5e0!3m2!1sen!2sus!4v1689847225457!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Haydeen Technologies office location in Effiduasi"
-              aria-label="Google Maps showing Haydeen Technologies location in Effiduasi, Ashanti"
+              title="Haydeen Technologies office location in Effiduase"
+              aria-label="Google Maps showing Haydeen Technologies location in Effiduase, Ashanti"
             ></iframe>
           </div>
         </div>

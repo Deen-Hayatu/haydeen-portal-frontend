@@ -50,7 +50,7 @@ function Router() {
         url="https://haydeentechnologies.com"
         address={{
           streetAddress: "Bw 14 Benz road",
-          addressLocality: "Effiduasi",
+          addressLocality: "Effiduase",
           addressRegion: "Ashanti",
           addressCountry: "Ghana"
         }}
