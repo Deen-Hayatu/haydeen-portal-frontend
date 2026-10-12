@@ -391,7 +391,7 @@ const Careers = () => {
 
             {/* Benefits Section */}
             <div className="bg-[#F8F9FA] rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-[#0A3D62] mb-6 text-center">What We Offer Both Positions</h3>
+              <h3 className="text-2xl font-bold text-[#0A3D62] mb-6 text-center">What We Offer All Our Interns</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-[#27AE60] bg-opacity-10 rounded-full flex items-center justify-center">
