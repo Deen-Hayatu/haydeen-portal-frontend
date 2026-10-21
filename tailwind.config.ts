@@ -89,6 +89,21 @@ export default {
         },
       },
       colors: {
+        
+        gradient_health: "#0A3D62",
+        gradient_health_light: "#1D4ED8",
+        gradientclassuiux: "#22C55E",
+        gradientclassuiux_light: "#2563EB",
+        buttonclassuiux: "#27AE60",
+        button_agribusiness: "#1ABC9C",
+        gradient_hero_light: "#0A2742",
+        gradient_hero_dark: "#041425",
+        ink_hero: "#FCD116",
+        brand_benefits: "#F8F9FA",
+        benefits_ink: "#E74C3C",
+        brand_why_join: "#F2F2F2",
+        ink_why_join: "#F39C12",
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
