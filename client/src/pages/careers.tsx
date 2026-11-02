@@ -37,8 +37,8 @@ type Section = {
               location : "Remote / Effiduase, Ashanti",
               employmentType : "Short-term Contract",
               jobType : "Internship Level",
-              gradient: "bg-gradient-to-r from-gradientclassuiux to-gradientclassuiux_light text-white",
-              buttonClass: "bg-buttonclassuiux hover:bg-buttonclassuiux/90 text-white px-8 py-3 text-lg",
+              gradient: "bg-gradient-to-r from-brand_green_light to-brand_blue_light text-white",
+              buttonClass: "bg-brand_green hover:bg-brand_green/90 text-white px-8 py-3 text-lg",
               sections : [
                 {  
                   title: "What You'll Do",
@@ -75,8 +75,8 @@ type Section = {
                 location : "Remote / Effiduase, Ashanti",
                 employmentType : "Short-term Contract",
                 jobType : "Internship Level",
-                gradient : "bg-gradient-to-r from-buttonclassuiux to-button_agribusiness text-white",
-                buttonClass: "bg-button_agribusiness hover:bg-button_agribusiness/90 text-white px-8 py-3 text-lg",
+                gradient : "bg-gradient-to-r from-brand_green to-brand_teal text-white",
+                buttonClass: "bg-brand_teal hover:bg-brand_teal/90 text-white px-8 py-3 text-lg",
                 sections : [
                   {  
                     title: "What You'll Do",
@@ -113,8 +113,8 @@ type Section = {
                 location: "Remote / Effiduase, Ashanti",
                 employmentType: "Short-term Contract",
                 jobType: "Internship Level",
-                gradient : "bg-gradient-to-r from-gradient_health to-gradient_health_light text-white",
-                buttonClass: "bg-gradient_health hover:bg-gradient_health/90 text-white px-8 py-3 text-lg",
+                gradient : "bg-gradient-to-r from-brand_navy_light to-brand_blue text-white",
+                buttonClass: "bg-brand_navy_light hover:bg-brand_navy_light/90 text-white px-8 py-3 text-lg",
                 sections : [
                   { 
                     title: "What You'll Do",
@@ -184,11 +184,11 @@ type Section = {
         <div className="grid md:grid-cols-2 gap-8">                        
           {sections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-xl font-bold text-gradient_health mb-4">{section.title}</h3>
+              <h3 className="text-xl font-bold text-brand_navy_light mb-4">{section.title}</h3>
               <ul className="space-y-3 text-gray-600">
                 {section.items.map((item, i) => (
                   <li key={i} className="flex items-start">
-                    <div className="w-2 h-2 bg-buttonclassuiux rounded-full mt-2 mr-3 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-brand_green rounded-full mt-2 mr-3 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -241,7 +241,7 @@ const Careers = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gradient_health via-gradient_hero_dark to-[#041425] text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-brand_navy_light via-brand_navy_dark to-brand_navy_dark text-white py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={teamCdn?.src ?? techTeamImage} 
@@ -253,7 +253,7 @@ const Careers = () => {
             decoding="async"
             onError={onCdnImgError(techTeamImage)}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gradient_health via-gradient_hero_dark/90 to-[#041425]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-brand_navy_light via-brand_navy_dark/90 to-brand_navy_dark/70"></div>
         </div>
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -266,7 +266,7 @@ const Careers = () => {
             </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center text-xs uppercase tracking-[0.4em] text-white/80">
                 <span className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
-                  <span className="w-2 h-2 rounded-full bg-ink_hero animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-brand_gold_light animate-pulse" />
                   Paid, sprint-based internships
                 </span>
                 <span className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
@@ -281,7 +281,7 @@ const Careers = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gradient_health mb-4">Current Openings</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-brand_navy_light mb-4">Current Openings</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
               We have three internship opportunities available across product design, research, and health information systems.
             </p>
@@ -293,30 +293,30 @@ const Careers = () => {
                   ))}      
 
             {/* Benefits Section */}
-            <div className="bg-brand_benefits rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gradient_health mb-6 text-center">What We Offer All Our Interns</h3>
+            <div className="bg-neutral_grey_light rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-brand_navy_light mb-6 text-center">What We Offer All Our Interns</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-buttonclassuiux bg-opacity-10 rounded-full flex items-center justify-center">
-                    <Monitor className="h-5 w-5 text-buttonclassuiux" />
+                  <div className="w-10 h-10 bg-brand_green bg-opacity-10 rounded-full flex items-center justify-center">
+                    <Monitor className="h-5 w-5 text-brand_green" />
                   </div>
                   <span className="text-gray-700">Flexible remote work options</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-button_agribusiness bg-opacity-10 rounded-full flex items-center justify-center">
-                    <Briefcase className="h-5 w-5 text-button_agribusiness" />
+                  <div className="w-10 h-10 bg-brand_teal bg-opacity-10 rounded-full flex items-center justify-center">
+                    <Briefcase className="h-5 w-5 text-brand_teal" />
                   </div>
                   <span className="text-gray-700">Real-world project experience</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-ink_why_join bg-opacity-10 rounded-full flex items-center justify-center">
-                    <Users className="h-5 w-5 text-ink_why_join" />
+                  <div className="w-10 h-10 bg-brand_gold bg-opacity-10 rounded-full flex items-center justify-center">
+                    <Users className="h-5 w-5 text-brand_gold" />
                   </div>
                   <span className="text-gray-700">Mentorship and guidance</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-benefits_ink bg-opacity-10 rounded-full flex items-center justify-center">
-                    <Search className="h-5 w-5 text-benefits_ink" />
+                  <div className="w-10 h-10 bg-brand_red bg-opacity-10 rounded-full flex items-center justify-center">
+                    <Search className="h-5 w-5 text-brand_red" />
                   </div>
                   <span className="text-gray-700">Portfolio development opportunities</span>
                 </div>
@@ -330,10 +330,10 @@ const Careers = () => {
       </section>
 
       {/* Why Join Us */}
-      <section className="py-16 md:py-24 bg-brand_why_join">
+      <section className="py-16 md:py-24 bg-neutral_grey">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gradient_health mb-4">Why Join Haydeen Technologies?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-brand_navy_light mb-4">Why Join Haydeen Technologies?</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
               Be part of a mission-driven team creating technology that transforms lives across Ghana and West Africa.
             </p>
@@ -341,30 +341,30 @@ const Careers = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-buttonclassuiux bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-buttonclassuiux" />
+              <div className="w-16 h-16 bg-brand_green bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="h-8 w-8 text-brand_green" />
               </div>
-              <h3 className="text-xl font-bold text-gradient_health mb-3">Real Impact</h3>
+              <h3 className="text-xl font-bold text-brand_navy_light mb-3">Real Impact</h3>
               <p className="text-gray-600">
                 Your designs will directly impact farmers improving their livelihoods and healthcare workers serving their communities.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-button_agribusiness bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Briefcase className="h-8 w-8 text-button_agribusiness" />
+              <div className="w-16 h-16 bg-brand_teal bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Briefcase className="h-8 w-8 text-brand_teal" />
               </div>
-              <h3 className="text-xl font-bold text-gradient_health mb-3">Career Growth</h3>
+              <h3 className="text-xl font-bold text-brand_navy_light mb-3">Career Growth</h3>
               <p className="text-gray-600">
                 Gain experience working on innovative MVPs in Ghana's growing tech ecosystem with mentorship and learning opportunities.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-ink_why_join bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Monitor className="h-8 w-8 text-ink_why_join" />
+              <div className="w-16 h-16 bg-brand_gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Monitor className="h-8 w-8 text-brand_gold" />
               </div>
-              <h3 className="text-xl font-bold text-gradient_health mb-3">Cutting-Edge Projects</h3>
+              <h3 className="text-xl font-bold text-brand_navy_light mb-3">Cutting-Edge Projects</h3>
               <p className="text-gray-600">
                 Work on AgriConnect and GhEHR platforms, designing solutions for unique challenges in West African markets.
               </p>
@@ -377,8 +377,8 @@ const Careers = () => {
         <section className="py-16 md:py-24 bg-white">
           <div className="container">
             <div className="text-center mb-12">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-buttonclassuiux">What to expect</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gradient_health mb-4">Our hiring process in three check-ins</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand_green">What to expect</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-brand_navy_light mb-4">Our hiring process in three check-ins</h2>
               <p className="max-w-2xl mx-auto text-gray-600">
                 We keep internships structured and respectful of your time-here's exactly what happens once you apply.
               </p>
@@ -387,14 +387,14 @@ const Careers = () => {
               {hiringSteps.map((step) => (
                 <div key={step.title} className="border border-gray-100 rounded-2xl p-6 shadow-sm">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500 mb-2">{step.duration}</p>
-                  <h3 className="text-xl font-bold text-gradient_health mb-3">{step.title}</h3>
+                  <h3 className="text-xl font-bold text-brand_navy_light mb-3">{step.title}</h3>
                   <p className="text-gray-600 text-sm">{step.description}</p>
                 </div>
               ))}
             </div>
             <div className="mt-8 text-center text-sm text-gray-500">
               <span className="inline-flex items-center gap-2 justify-center">
-                <ShieldCheck className="w-4 h-4 text-buttonclassuiux" />
+                <ShieldCheck className="w-4 h-4 text-brand_green" />
                 Every applicant receives written feedback after the working session.
               </span>
             </div>
@@ -402,7 +402,7 @@ const Careers = () => {
         </section>
 
       {/* Application CTA */}
-      <section className="py-16 bg-gradient-to-r from-gradient_health to-buttonclassuiux text-white">
+      <section className="py-16 bg-gradient-to-r from-brand_navy_light to-brand_green text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Mission?</h2>
@@ -411,12 +411,12 @@ const Careers = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/apply">
-                <Button size="lg" className="bg-white text-gradient_health hover:bg-gray-100 px-8 py-3 text-lg font-medium">
+                <Button size="lg" className="bg-white text-brand_navy_light hover:bg-gray-100 px-8 py-3 text-lg font-medium">
                   Apply Now
                 </Button>
               </Link>
               <Link href="/solutions/ghehr">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gradient_health px-8 py-3 text-lg font-medium">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand_navy_light px-8 py-3 text-lg font-medium">
                   See GhEHR in Action
                 </Button>
               </Link>
