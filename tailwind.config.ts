@@ -20,8 +20,20 @@ const primitives = {
       "brand_gold": "#F39C12",
 }
 const semantic ={
-
-}
+      "hero_gradient_start": primitives["brand_navy_light"],
+      "hero_gradient_mid": primitives["brand_navy"],
+      "hero_gradient_end": primitives["brand_navy_dark"],
+      "surface_muted": primitives["neutral_grey"],
+      "surface_secondary": primitives["neutral_grey_light"],     //slightly subtle as compared to main surface
+      "icon_accent_primary": primitives["brand_gold"],
+      "icon_accent_secondary": primitives["brand_red"],
+      "status_warning": primitives["brand_gold_light"],
+      "card_1_gradient_start": primitives["brand_green_light"],
+      "card_1_gradient_end": primitives["brand_blue_light"],
+      "card_2_gradient_start": primitives["brand_green"],
+      "card_2_gradient_end": primitives["brand_teal"],
+      "card_3_gradient_end": primitives["brand_blue"],
+    }
 
 export default {
   darkMode: ["class"],
@@ -107,6 +119,9 @@ export default {
         },
       },
       colors: {
+      ...primitives,
+      ...semantic,
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
