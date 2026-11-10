@@ -32,7 +32,7 @@
   --brand-secondary: #107c10;
   --brand-secondary-dark: #0b5f0b;
   --brand-highlight: #facc15;
-  --brand-tertiary: #0a3d62;
+  --brand-tertiary: var(--deep-blue);
   --brand-tertiary-dark: #041425;
   --brand-healthcare: #185abd;
   

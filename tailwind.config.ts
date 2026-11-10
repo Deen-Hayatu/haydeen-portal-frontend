@@ -4,6 +4,36 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const primitives = {
+      "brand_navy_light": "#0A3D62",
+      "brand_blue": "#1D4ED8",
+      "brand_green_light": "#22C55E",
+      "brand_blue_light": "#2563EB",
+      "brand_green": "#27AE60",
+      "brand_teal": "#1ABC9C",
+      "brand_navy": "#0A2742",
+      "brand_navy_dark": "#041425",
+      "brand_gold_light": "#FCD116",
+      "neutral_grey_light": "#F8F9FA",
+      "brand_red": "#E74C3C",
+      "neutral_grey": "#F2F2F2",
+      "brand_gold": "#F39C12",
+}
+const semantic ={
+      "hero_gradient_start": primitives["brand_navy_light"],
+      "hero_gradient_mid": primitives["brand_navy"],
+      "hero_gradient_end": primitives["brand_navy_dark"],
+      "surface_muted": primitives["neutral_grey"],
+      "surface_secondary": primitives["neutral_grey_light"],     //slightly subtle as compared to main surface
+      "icon_accent_primary": primitives["brand_gold"],
+      "icon_accent_secondary": primitives["brand_red"],
+      "status_warning": primitives["brand_gold_light"],
+      "card_1_gradient_start": primitives["brand_green_light"],
+      "card_1_gradient_end": primitives["brand_blue_light"],
+      "card_2_gradient_start": primitives["brand_green"],
+      "card_2_gradient_end": primitives["brand_teal"],
+      "card_3_gradient_end": primitives["brand_blue"],
+    }
 
 export default {
   darkMode: ["class"],
@@ -89,6 +119,9 @@ export default {
         },
       },
       colors: {
+      ...primitives,
+      ...semantic,
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
